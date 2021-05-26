@@ -4,16 +4,22 @@
       <v-container class="fill-height">
         <v-row class="fill-height " align="center" justify="stretch">
           <v-col class="text-center">
-            <v-card rounded>
-              <v-row>
+            <v-card class="px-8" style="border-radius: 30px">
+              <v-row class="ma-0">
                 <v-col>
-                  <v-select prepend-icon="mdi-calendar" label="Type Year"></v-select>
+                  <v-select label="Type Year" class="border-r">
+                    <v-icon slot="prepend" color="blue">mdi-calendar</v-icon>
+                  </v-select>
                 </v-col>
                 <v-col>
-                  <v-select prepend-icon="mdi-calendar" label="Type Make"></v-select>
+                  <v-select label="Type Make" class="border-r">
+                    <v-icon slot="prepend" color="blue">mdi-calendar</v-icon>
+                  </v-select>
                 </v-col>
                 <v-col>
-                  <v-select prepend-icon="mdi-calendar" label="Type Model"></v-select>
+                  <v-select label="Type Model">
+                    <v-icon slot="prepend" color="blue">mdi-calendar</v-icon>
+                  </v-select>
                 </v-col>
               </v-row>
             </v-card>
@@ -54,44 +60,18 @@ import MailBox from "../components/MailBox.vue";
 export default {
   name: 'Home',
   components: {MailBox},
-  data: () => ({
-    fab: false,
-    valid: true,
-    name: '',
-    nameRules: [
-      v => !!v || this.$i18n.locale === 'fr' ? 'Veillez saisir votre nom' : 'Name is required',
-    ],
-    email: '',
-    emailRules: [
-      v => !!v || this.$i18n.locale === 'fr' ? 'Veillez saisir votre couriel' : 'Email is required',
-      v => /.+@.+\..+/.test(v) || 'E-mail Invalide',
-    ],
-    select: null,
-  }),
-
-  methods: {
-    validate() {
-      this.$refs.form.validate()
-    },
-    onScroll(e) {
-      if (typeof window === 'undefined') return
-      const top = window.pageYOffset || e.target.scrollTop || 0
-      this.fab = top > 20
-    },
-    toTop() {
-      this.$vuetify.goTo(0)
-    }
-
-  },
+  data: () => ({}),
 }
 </script>
 <style scoped>
-.home {
+.border-r {
+  border-right: 5px solid #0088ff;
 }
 
 .hero {
   height: 50vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/img/3.jpg') center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url('../assets/img/3.jpg') center center no-repeat;
   background-size: contain;
 }
+
 </style>

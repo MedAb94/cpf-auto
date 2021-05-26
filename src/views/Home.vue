@@ -1,6 +1,20 @@
 <template>
   <div>
-    <slider></slider>
+    <section class="hero">
+      <v-container class="fill-height">
+        <v-row class="fill-height" align="center" justify="stretch">
+          <v-col cols="12" class="text-center white--text">
+            <h1 class="display-2">
+              We Provide <span class="blue--text">Genuine Parts</span>
+            </h1>
+            <h1 class="display-1 my-5">At a Competitive Price</h1>
+            <div>
+              <v-btn rounded class="blue white--text px-8">{{ $t("home.shopNow") }}</v-btn>
+            </div>
+          </v-col>
+        </v-row>
+      </v-container>
+    </section>
     <section class="light pa-8">
       <v-card class="white pa-5" flat rounded>
         <v-row>
@@ -62,34 +76,40 @@
     </section>
     <section>
       <!--Brands-->
-      <v-sheet
-          class="mx-auto"
-      >
-        <v-slide-group
-            multiple
-            show-arrows
-            center-active
+      <v-container>
+        <h3 class="blue--text">Our Brands _______
+          <v-icon style="margin-top: 5px">mdi-circle-small</v-icon>
+        </h3>
+        <v-sheet
+            class="mx-auto"
         >
-          <v-slide-item v-slot="{ active, toggle }">
-            <img src="../assets/img/brands/armorall.jpg">
-          </v-slide-item>
-          <v-slide-item active v-slot="{ active, toggle }">
-            <img src="../assets/img/brands/fourseasons.jpg">
-          </v-slide-item>
-          <v-slide-item v-slot="{ active, toggle }">
-            <img src="../assets/img/brands/genius.jpg">
-          </v-slide-item>
-          <v-slide-item v-slot="{ active, toggle }">
-            <img src="../assets/img/brands/moog.jpg">
-          </v-slide-item>
-          <v-slide-item v-slot="{ active, toggle }">
-            <img src="../assets/img/brands/walkerexhaust.jpg">
-          </v-slide-item>
-          <v-slide-item v-slot="{ active, toggle }">
-            <img src="../assets/img/brands/armorall.jpg">
-          </v-slide-item>
-        </v-slide-group>
-      </v-sheet>
+          <v-slide-group
+              multiple
+              show-arrows
+              center-active
+          >
+            <v-slide-item v-slot="{ active, toggle }">
+              <img src="../assets/img/brands/armorall.jpg">
+            </v-slide-item>
+            <v-slide-item active v-slot="{ active, toggle }">
+              <img src="../assets/img/brands/fourseasons.jpg">
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <img src="../assets/img/brands/genius.jpg">
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <img src="../assets/img/brands/moog.jpg">
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <img src="../assets/img/brands/walkerexhaust.jpg">
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <img src="../assets/img/brands/armorall.jpg">
+            </v-slide-item>
+          </v-slide-group>
+        </v-sheet>
+      </v-container>
+
     </section>
     <mail-box/>
     <v-btn
@@ -115,46 +135,21 @@ import MailBox from "../components/MailBox.vue";
 export default {
   name: 'Home',
   components: {MailBox, Slider},
-  data: () => ({
-    fab: false,
-    model: 0,
-    valid: true,
-    name: '',
-    nameRules: [
-      v => !!v || this.$i18n.locale === 'fr' ? 'Veillez saisir votre nom' : 'Name is required',
-    ],
-    email: '',
-    emailRules: [
-      v => !!v || this.$i18n.locale === 'fr' ? 'Veillez saisir votre couriel' : 'Email is required',
-      v => /.+@.+\..+/.test(v) || 'E-mail Invalide',
-    ],
-    select: null,
-  }),
+  data: () => ({}),
 
-  methods: {
-    validate() {
-      this.$refs.form.validate()
-    },
-    onScroll(e) {
-      if (typeof window === 'undefined') return
-      const top = window.pageYOffset || e.target.scrollTop || 0
-      this.fab = top > 20
-    },
-    toTop() {
-      this.$vuetify.goTo(0)
-    }
-
-  },
+  methods: {},
 }
 </script>
 <style scoped>
-.home {
+.hero {
+  height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url('../assets/slide/1.jpg') no-repeat center top;
+  background-size: cover;
 }
 
 .half-bordered {
   border: 8px solid blue;
   border-top: 0;
   border-left: 0;
-  border-radius: 10px;
 }
 </style>

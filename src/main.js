@@ -7,7 +7,8 @@ import i18n from './i18n'
 import VueSmoothScroll from 'vue2-smooth-scroll'
 Vue.use(VueSmoothScroll)
 Vue.config.productionTip = false
-
+import GSignInButton from 'vue-google-signin-button'
+Vue.use(GSignInButton)
 new Vue({
   router,
   store,
