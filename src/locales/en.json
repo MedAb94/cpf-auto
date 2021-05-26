@@ -1,0 +1,32 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About us",
+    "parts": "Parts",
+    "contact": "Contact us",
+    "account": "Account"
+  },
+  "home": {
+    "title": "We Provide Genuine Parts At A Competitive Price",
+    "shopNow": "Shop now"
+  },
+  "contact": {
+    "title": "CONTACT US",
+    "name": "Your name",
+    "email": "Your E-mail",
+    "subject": "Subject",
+    "message": "Your message",
+    "send": "Send"
+  },
+  "mailBox": {
+    "stay": "Stay informed",
+    "subscribe": "Subscribe to our mailbox",
+    "subscribeBtn": "Subscribe"
+  },
+  "footer": {
+    "downloadApp": "download the mobile application",
+    "think": "Think of TOWUGO when you need a towing, mechanical repair service at your home or on the road.",
+    "address": "Address",
+    "links": "Quick links"
+  }
+}
