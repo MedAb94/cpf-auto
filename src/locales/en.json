@@ -4,11 +4,34 @@
     "about": "About us",
     "parts": "Parts",
     "contact": "Contact us",
-    "account": "Account"
+    "account": "Account",
+    "search": "Enter the name of part or a part number # "
   },
   "home": {
-    "title": "We Provide Genuine Parts At A Competitive Price",
+    "title": {
+      "1": "We provide",
+      "10": "genuine parts",
+      "2": "at a competitive price"
+    },
     "shopNow": "Shop now"
+  },
+  "services": {
+    "1": {
+      "title": "Shpping in Montreal and areas",
+      "desc": "We quickly deliver auto parts in the greater Montreal and areas"
+    },
+    "2": {
+      "title": "Here To Support You",
+      "desc": "If you have any question or comment, please contact us during our hours of operation or fill the contact us form."
+    },
+    "3": {
+      "title": "Secure payments",
+      "desc": "Shop and pay securely by Visa, Mastercard or Paypal"
+    },
+    "weHave": "We have the part that you need",
+    "weHaveText": "Whatever the make of your vehicle and the part you need, we have it and can deliver it to you quickly.",
+    "viewParts": "View parts"
+
   },
   "contact": {
     "title": "CONTACT US",
@@ -19,14 +42,14 @@
     "send": "Send"
   },
   "mailBox": {
-    "stay": "STAY INFORMED WITH US",
+    "stay": "Subscribe to our mailbox",
     "subscribe": "Subscribe to our mailbox",
-    "subscribeBtn": "Subscribe"
+    "subscribeBtn": "Send"
   },
+  "brands": "Our Brands",
   "footer": {
-    "downloadApp": "download the mobile application",
-    "think": "Think of TOWUGO when you need a towing, mechanical repair service at your home or on the road.",
     "address": "Address",
-    "links": "Quick links"
+    "links": "Quick links",
+    "delivery": "Delivery available in Montreal and Areas"
   }
 }

@@ -5,9 +5,9 @@
         <v-row class="fill-height" align="center" justify="stretch">
           <v-col cols="12" class="text-center white--text">
             <h1 class="display-2">
-              We Provide <span class="blue--text">Genuine Parts</span>
+              {{ $t('home.title.1') }} <span class="blue--text">{{ $t('home.title.10') }}</span>
             </h1>
-            <h1 class="display-1 my-5">At a Competitive Price</h1>
+            <h1 class="display-1 my-5"> {{ $t('home.title.2') }}</h1>
             <div>
               <v-btn rounded class="blue white--text px-8">{{ $t("home.shopNow") }}</v-btn>
             </div>
@@ -24,9 +24,9 @@
             </div>
             <div class="px-6">
               <h3>
-                Shpping in Montreal and areas
+                {{ $t("services.1.title") }}
               </h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, odio.</p>
+              <p>{{ $t("services.1.desc") }}</p>
             </div>
           </v-col>
           <v-col class="text-center">
@@ -35,9 +35,9 @@
             </div>
             <div class="px-6">
               <h3>
-                Here To Support You
+                {{ $t("services.2.title") }}
               </h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, odit?</p>
+              <p>{{ $t("services.2.desc") }}</p>
             </div>
           </v-col>
           <v-col class="text-center">
@@ -45,10 +45,10 @@
               <v-icon x-large color="primary" class="mb-5">mdi-credit-card-settings-outline</v-icon>
             </div>
             <div class="px-6">
-              <h3 class="primary--text">
-                Payment Secure
+              <h3>
+                {{ $t("services.3.title") }}
               </h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, non.</p>
+              <p>{{ $t("services.3.desc") }}</p>
             </div>
           </v-col>
         </v-row>
@@ -57,16 +57,16 @@
         <v-row align="center">
           <v-col cols="12" lg="6" md="6">
             <h3 class="primary--text">
-              We Have The Part That You Need
+              {{ $t("services.weHave") }}
             </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci aliquam assumenda deserunt
-              ducimus, eaque eligendi ex facilis nam odit porro possimus praesentium quis repellendus reprehenderit sed
-              veniam, voluptatem voluptatum!
-              <br>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consectetur eius facere itaque libero
-              quisquam ratione, reiciendis repellat veniam. Alias error fugiat inventore ipsam nihil recusandae
-              voluptas. Fugit, modi, ut. <br>
+            <p> {{ $t("services.weHaveText") }}
             </p>
+            <div class="text-center">
+              <v-btn rounded class="blue white--text px-8 mt-8" :to="{name: 'Parts'}">{{
+                  $t("services.viewParts")
+                }}
+              </v-btn>
+            </div>
           </v-col>
           <v-col cols="12" lg="6" md="6">
             <img src="../assets/img/1.jpg" class="half-bordered" style="width: 100%" alt="">
@@ -77,54 +77,68 @@
     <section>
       <!--Brands-->
       <v-container>
-        <h3 class="blue--text">Our Brands _______
+        <h3 class="blue--text">{{ $t("brands") }} _______
           <v-icon style="margin-top: 5px">mdi-circle-small</v-icon>
         </h3>
-        <v-sheet
-            class="mx-auto"
+        <v-container
         >
-          <v-slide-group
-              multiple
-              show-arrows
-              center-active
-          >
-            <v-slide-item v-slot="{ active, toggle }">
-              <img src="../assets/img/brands/armorall.jpg">
-            </v-slide-item>
-            <v-slide-item active v-slot="{ active, toggle }">
-              <img src="../assets/img/brands/fourseasons.jpg">
-            </v-slide-item>
-            <v-slide-item v-slot="{ active, toggle }">
-              <img src="../assets/img/brands/genius.jpg">
-            </v-slide-item>
-            <v-slide-item v-slot="{ active, toggle }">
-              <img src="../assets/img/brands/moog.jpg">
-            </v-slide-item>
-            <v-slide-item v-slot="{ active, toggle }">
-              <img src="../assets/img/brands/walkerexhaust.jpg">
-            </v-slide-item>
-            <v-slide-item v-slot="{ active, toggle }">
-              <img src="../assets/img/brands/armorall.jpg">
-            </v-slide-item>
-          </v-slide-group>
-        </v-sheet>
+          <v-row align="center" justify="stretch">
+            <v-col cols="12" lg="3" md="4">
+              <v-card
+                  class="mx-auto"
+                  max-width="344"
+              >
+                <v-img
+                    src="../assets/img/brands/armorall.jpg"
+                />
+              </v-card>
+            </v-col>
+            <v-col cols="12" lg="3" md="4">
+              <v-card
+                  class="mx-auto"
+                  max-width="344"
+              >
+                <v-img
+                    src="../assets/img/brands/fourseasons.jpg"
+                />
+              </v-card>
+            </v-col>
+            <v-col cols="12" lg="3" md="4">
+              <v-card
+                  class="mx-auto"
+                  max-width="344"
+              >
+                <v-img
+                    src="../assets/img/brands/genius.jpg"
+                />
+              </v-card>
+            </v-col>
+            <v-col cols="12" lg="3" md="4">
+              <v-card
+                  class="mx-auto"
+                  max-width="344"
+              >
+                <v-img
+                    src="../assets/img/brands/moog.jpg"
+                />
+              </v-card>
+            </v-col>
+            <v-col cols="12" lg="3" md="4">
+              <v-card
+                  class="mx-auto"
+                  max-width="344"
+              >
+                <v-img
+                    src="../assets/img/brands/walkerexhaust.jpg"
+                />
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
       </v-container>
 
     </section>
     <mail-box/>
-    <v-btn
-        v-scroll="onScroll"
-        v-show="fab"
-        fab
-        dark
-        fixed
-        bottom
-        right
-        color="primary"
-        @click="toTop"
-    >
-      <v-icon>mdi-chevron-up</v-icon>
-    </v-btn>
   </div>
 
 </template>
@@ -135,7 +149,15 @@ import MailBox from "../components/MailBox.vue";
 export default {
   name: 'Home',
   components: {MailBox, Slider},
-  data: () => ({}),
+  data: () => ({
+    imgs: [
+      "../assets/img/brands/armorall.jpg",
+      "../assets/img/brands/fourseasons.jpg",
+      "../assets/img/brands/genius.jpg",
+      "../assets/img/brands/moog.jpg",
+      "../assets/img/brands/walkerexhaust.jpg",
+    ]
+  }),
 
   methods: {},
 }

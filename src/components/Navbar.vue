@@ -4,50 +4,50 @@
       <v-list class="pl-4">
         <v-list-item>
           <v-list-item-title>
-            <a href="/" >
+            <router-link :to="{name:'Home'}">
               <v-btn text class="white--text">
                 {{ $t('navbar.home') }}
               </v-btn>
-            </a>
+            </router-link>
           </v-list-item-title>
         </v-list-item>
 
         <v-list-item>
           <v-list-item-title>
-            <a href="/about" >
+            <router-link :to="{name:'About'}">
               <v-btn text class="white--text">
                 {{ $t('navbar.about') }}
               </v-btn>
-            </a>
+            </router-link>
           </v-list-item-title>
         </v-list-item>
 
         <v-list-item>
           <v-list-item-title>
-            <a href="/parts" >
+            <router-link :to="{name:'Parts'}">
               <v-btn text class="white--text">
                 {{ $t('navbar.parts') }}
               </v-btn>
-            </a>
+            </router-link>
           </v-list-item-title>
         </v-list-item>
         <v-list-item>
           <v-list-item-title>
-            <a href="/contact" >
+            <router-link :to="{name:'Contact'}">
               <v-btn text class="white--text">
                 {{ $t('navbar.contact') }}
               </v-btn>
-            </a>
+            </router-link>
           </v-list-item-title>
         </v-list-item>
 
         <v-list-item>
           <v-list-item-title>
-            <a href="/account" >
+            <router-link :to="{name:'Login'}">
               <v-btn text class="white--text">
                 {{ $t('navbar.account') }}
               </v-btn>
-            </a>
+            </router-link>
           </v-list-item-title>
         </v-list-item>
         <v-list-item>
@@ -55,33 +55,35 @@
       </v-list>
 
 
-    </v-navigation-drawer >
+    </v-navigation-drawer>
     <v-app-bar
         color="primary"
         dark
         flat
     >
       <div :class="$vuetify.breakpoint.mdAndUp?'mt-1':'mt-1'">
-        <v-img
-            alt="Vuetify Logo"
-            class="shrink mr-2"
-            contain
-            src="../assets/logo.png"
-            transition="scale-transition"
-            :width="$vuetify.breakpoint.smAndDown?100:170"
-        />
-      </div>
+        <router-link :to="{name: 'Home'}">
+          <v-img
+              alt="Vuetify Logo"
+              class="shrink mr-2"
+              contain
+              src="../assets/logo.png"
+              transition="scale-transition"
+              :width="$vuetify.breakpoint.smAndDown?100:170"
+          />
+        </router-link>
 
+      </div>
       <v-spacer></v-spacer>
-      <v-text-field rounded outlined background-color="white" dense class="mt-5">
+      <v-text-field color="blueDark" :label="$t('navbar.search')" rounded outlined background-color="white" dense class="mt-5">
         <template v-slot:append>
           <v-icon color="primary">mdi-magnify</v-icon>
         </template>
       </v-text-field>
       <v-spacer></v-spacer>
-      <v-btn text>
+      <v-btn text class="hidden-sm-and-down">
         <v-icon>mdi-phone</v-icon>
-        524-325-4619
+        514-325-4619
       </v-btn>
       <v-btn href="/cart" icon>
         <v-badge
@@ -94,55 +96,55 @@
         </v-badge>
       </v-btn>
       <v-btn
-          text class="white--text ml-5"
+          text class="white--text"
           v-if="$i18n.locale==='en'"
           @click="switchLang('fr')"
       >
-        Français
+        Fr
       </v-btn>
       <v-btn
-          text class="white--text ml-5"
+          text class="white--text ml-2"
           v-if="$i18n.locale==='fr'"
           @click="switchLang('en')"
       >
-        English
+        En
       </v-btn>
+      <v-app-bar-nav-icon
+          @click.stop="drawer = !drawer"
+          class="hidden-md-and-up white--text "
+      />
     </v-app-bar>
+    <!--    Lg navbar-->
     <v-layout class="blueDark white--text">
       <v-spacer></v-spacer>
-      <div class="hidden-md-and-down">
-        <a href="/" >
+      <div class="hidden-sm-and-down">
+        <router-link :to="{name:'Home'}">
           <v-btn text class="white--text">
             {{ $t('navbar.home') }}
           </v-btn>
-        </a>
-        <a href="/about" >
+        </router-link>
+        <router-link :to="{name:'About'}">
           <v-btn text class="white--text">
             {{ $t('navbar.about') }}
           </v-btn>
-        </a>
-        <a class="white--text" href="/parts" >
+        </router-link>
+        <router-link class="white--text" :to="{name:'Parts'}">
           <v-btn text class="white--text">
             {{ $t('navbar.parts') }}
           </v-btn>
-        </a>
-        <a href="/contact" >
+        </router-link>
+        <router-link :to="{name:'Contact'}">
           <v-btn text class="white--text">
             {{ $t('navbar.contact') }}
           </v-btn>
-        </a>
-        <a href="/auth" >
+        </router-link>
+        <router-link :to="{name:'Login'}">
           <v-btn text class="white--text">
             {{ $t('navbar.account') }}
           </v-btn>
-        </a>
+        </router-link>
       </div>
       <v-spacer></v-spacer>
-
-      <v-app-bar-nav-icon
-          @click.stop="drawer = !drawer"
-          class="hidden-md-and-up white"
-      />
     </v-layout>
   </div>
 </template>

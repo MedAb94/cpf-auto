@@ -1,26 +1,36 @@
 {
-  "appName": "TOWUGO",
   "navbar": {
-    "home": "Accueil",
-    "about": "À Propos",
-    "downloadApp": "Téléchargez l'app",
+    "home": "ACCUEIL",
+    "about": "À PROPOS",
+    "parts": "LES PIÈCES",
     "contact": "CONTACTEZ-NOUS",
-    "atYourService": "À votre service toutes les saisons"
+    "account": "COMPTE",
+    "search": "Entrez le nom de la pièce ou un numéro de pièce #"
+  },
+  "services": {
+    "1": {
+      "title": "Shpping in Montreal and areas",
+      "desc": "Nous livrons rapidement les pièces d'auto dans la grande région de Montréal et les villes environnantes"
+    },
+    "2": {
+      "title": "Nous sommes là pour vous aider",
+      "desc": "Si vous avez des questions ou des commentaires, veuillez nous contacter pendant nos heures d'ouverture ou remplir le formulaire contactez-nous."
+    },
+    "3": {
+      "title": "Paiements sécurisés",
+      "desc": "Magasinez et payez sécuritairement par Visa, Mastercard ou Paypal"
+    },
+    "weHave": "Nous avons la pièce d'auto que vous cherchez",
+    "weHaveText": "Quelle que la marque de votre véhicule et la pièce dont vous avez besoin, nous l'avons et pouvons vous la livrer rapidement.",
+    "viewParts": "VOIR LES PIÈCES "
   },
   "home": {
-    "downloadNow": "Téléchargez maintenant",
-    "title": "Avez-vous besoin de faire réparer votre véhicule directement à votre domicile, sur la route ou d'un remorquage?",
-    "subtitle": "  Nous trouvons un service proche de votre emplacement, pour vous assister rapidement.",
-    "howItWorks": {
-      "title": "Comment fonctionne L’application mobile TOWUGO?",
-      "text": "Lorsque survient un accident ou un souci mécanique à votre automobile, sur la route ou à domicile, \nTOWUGO est là pour vous. En effet, cette nouvelle application mobile gratuite localise la compagnie \nde service proche de l’emplacement de votre panne et vous met en relations avec elle dans le but de vous prendre en charge rapidement. ",
-      "services": "Les services offerts sont :",
-      "serv1": "Le support de remorquage",
-      "serv1Text": "De façon générale, un service de remorquage comprend le remorquage lui-même, le survoltage de la batterie, le changement de pneu après une crevaison, le déverrouillage des portières et la livraison d’essence",
-      "serv2": "Le support de réparation mécanique ",
-      "text2": "De façon générale le support mécanique offert à n’importe quel emplacement de votre véhicule inclut les réparations ne \nnécessitant pas le levage complet du véhicule tel que le survoltage de la batterie, changement des pneus, huile, alternateur, freins,\n disques, déverrouillage des portières, etc."
+    "title": {
+      "1": "Nous vendons",
+      "10": "les pièces d’autos",
+      "2": "à des prix compétitifs"
     },
-    "send": "Envoyer"
+    "shopNow": "MAGASINER MAINTENANT"
   },
   "contact": {
     "title": "CONTACTEZ-NOUS",
@@ -29,14 +39,14 @@
     "message": "Votre message"
   },
   "mailBox": {
-    "stay": "Restez informé",
+    "stay": "Inscrivez-vous à notre infolettre",
     "subscribe": "Abonnez-vous à notre boîte aux lettres",
-    "subscribeBtn": "S'inscrire"
+    "subscribeBtn": "Envoyer"
   },
+  "brands": "Nos marques",
   "footer": {
-    "downloadApp": "TÉLÉCHARGEZ L’APPLICATION MOBILE",
-    "think": "Pensez à TOWUGO lorsque vous avez besoin d’un service de remorquage, de réparation mécanique à\n votre domicile ou sur la route.",
     "address": "Adresse",
-    "links": "Liens rapides"
+    "links": "Liens rapides",
+    "delivery": "Livraison dans la region de Monteréal et ses environs"
   }
 }
