@@ -1,19 +1,19 @@
 <template>
   <v-container>
     <v-card>
-      <v-card-title class="red">{{ $route.params.categ_name }}</v-card-title>
+      <v-card-title class="black white--text">{{ $route.params.categ_name }}</v-card-title>
       <v-card-text>
         <v-row class="my-3">
           <v-col cols="12">
             <v-row>
-              <v-col cols="12" lg="4" md="4">
-                filter
-              </v-col>
-              <v-col cols="12" lg="8" md="8">
+              <v-col cols="12" >
                 <v-row>
                   <v-col cols="12" class="border-light my-3" v-for="p in allParts" :key="p.id">
                     <v-row>
-                      <v-col cols="2"><img :src="p.product.img_url" alt="Image"></v-col>
+                      <v-col cols="2">
+                        <img :src="p.product.img_url" alt="Image" v-if="p.product.img_url">
+                        <v-img src="../../assets/img/cam-icon.png" alt="Image" v-else/>
+                      </v-col>
                       <v-col cols="8">
                         <div> #{{ p.product.id }} |{{ p.product.fournisseur }}</div>
                         <v-row>
