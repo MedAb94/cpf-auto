@@ -89,6 +89,46 @@
                   max-width="344"
               >
                 <v-img
+                    src="../assets/img/brands/transbec fournisseur.jpg"
+                />
+              </v-card>
+            </v-col>
+            <v-col cols="12" lg="3" md="4">
+              <v-card
+                  class="mx-auto"
+                  max-width="344"
+              >
+                <v-img
+                    src="../assets/img/brands/Monidex logo.png"
+                />
+              </v-card>
+            </v-col>
+            <v-col cols="12" lg="3" md="4">
+              <v-card
+                  class="mx-auto"
+                  max-width="344"
+              >
+                <v-img
+                    src="../assets/img/brands/Altrom-Group.jpg"
+                />
+              </v-card>
+            </v-col>
+            <v-col cols="12" lg="3" md="4">
+              <v-card
+                  class="mx-auto"
+                  max-width="344"
+              >
+                <v-img
+                    src="../assets/img/brands/Alliance_Connect_fournisseur.jpg"
+                />
+              </v-card>
+            </v-col>
+            <v-col cols="12" lg="3" md="4">
+              <v-card
+                  class="mx-auto"
+                  max-width="344"
+              >
+                <v-img
                     src="../assets/img/brands/armorall.jpg"
                 />
               </v-card>

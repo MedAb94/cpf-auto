@@ -9,6 +9,8 @@ Vue.use(VueSmoothScroll)
 Vue.config.productionTip = false
 import GSignInButton from 'vue-google-signin-button'
 Vue.use(GSignInButton)
+const axios = require('axios')
+axios.defaults.baseURL = "https://piecesdautocpf.ca/api";
 new Vue({
   router,
   store,

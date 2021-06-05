@@ -3,7 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About'
 import Contact from "@/views/Contact";
-import Parts from "@/views/Parts";
+import Parts from "@/views/parts/Parts";
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -11,12 +12,12 @@ const routes = [
         path: '/',
         name: 'Home',
         component: Home
-    } ,
+    },
     {
         path: '/about',
         name: 'About',
         component: About
-    } ,
+    },
     {
         path: '/contact',
         name: 'Contact',
@@ -25,14 +26,28 @@ const routes = [
     {
         path: '/parts',
         name: 'Parts',
-        component: Parts
+        component: () => import("../views/parts/Index"),
+        redirect: {name: 'PartsFilter'},
+        children: [
+            {
+                path: 'filter',
+                name: 'PartsFilter',
+                component: Parts,
+            },
+            {
+                path: 'per-cotegory/:categ_name/:categ_id/:model_id',
+                name: 'CategParts',
+                component:() => import("../views/parts/CategoryParts"),
+            },
+        ]
     },
+
     {
         path: '/auth',
         name: 'Auth',
         component: () => import("../views/auth/Index"),
         redirect: '/auth/login',
-        children:[
+        children: [
             {
                 path: 'login',
                 name: 'Login',
