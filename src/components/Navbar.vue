@@ -2,7 +2,7 @@
   <div>
     <v-navigation-drawer absolute temporary class="primary" v-model="drawer">
       <v-list class="pl-4">
-        <v-list-item>
+        <v-list-item v-if="!$route.matched.some(({ name }) => name === 'Home')">
           <v-list-item-title>
             <router-link :to="{name:'Home'}">
               <v-btn text class="white--text">
@@ -75,7 +75,7 @@
 
       </div>
       <v-spacer></v-spacer>
-      <v-text-field color="blueDark" :label="$t('navbar.search')" rounded outlined background-color="white" dense class="mt-5">
+      <v-text-field :placeholder="$t('navbar.search')" rounded outlined background-color="white" dense class="mt-5 custom-placeholer-color" >
         <template v-slot:append>
           <v-icon color="primary">mdi-magnify</v-icon>
         </template>
@@ -118,7 +118,7 @@
     <v-layout class="blueDark white--text">
       <v-spacer></v-spacer>
       <div class="hidden-sm-and-down">
-        <router-link :to="{name:'Home'}">
+        <router-link :to="{name:'Home'}" v-if="!$route.matched.some(({ name }) => name === 'Home')">
           <v-btn text class="white--text">
             {{ $t('navbar.home') }}
           </v-btn>
@@ -168,4 +168,9 @@ export default {
 a {
   text-decoration: none;
 }
+.custom-placeholer-color input::placeholder {
+  color: black !important;
+  opacity: 0.8;
+}
+
 </style>

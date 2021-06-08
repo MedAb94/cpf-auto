@@ -5,7 +5,7 @@
     "parts": "Parts",
     "contact": "Contact us",
     "account": "Account",
-    "search": "Enter the name of part or a part number # "
+    "search": "Enter the name or the part number #"
   },
   "home": {
     "title": {
@@ -15,9 +15,11 @@
     },
     "shopNow": "Shop now"
   },
+  "brands": "Our Brands",
+  "suppliers": "Our Suppliers",
   "services": {
     "1": {
-      "title": "Shpping in Montreal and areas",
+      "title": "Shipping in Montreal and areas",
       "desc": "We quickly deliver auto parts in the greater Montreal and areas"
     },
     "2": {
@@ -34,22 +36,40 @@
 
   },
   "contact": {
-    "title": "CONTACT US",
+    "title": "Do you have questions or comments? ",
+    "subtitle": "Please use the section below to contact us",
     "name": "Your name",
     "email": "Your E-mail",
     "subject": "Subject",
     "message": "Your message",
     "send": "Send"
   },
+  "parts": {
+    "filter": {
+      "year": "Year",
+      "make": "Make",
+      "model": "Model"
+    },
+    "selectCateg": "Select a category"
+  },
   "mailBox": {
     "stay": "Subscribe to our mailbox",
     "subscribe": "Subscribe to our mailbox",
     "subscribeBtn": "Send"
   },
-  "brands": "Our Suppliers",
   "footer": {
     "address": "Address",
     "links": "Quick links",
     "delivery": "Delivery available in Montreal and Areas"
+  },
+  "auth": {
+    "login": "USER LOGIN",
+    "email": "Email",
+    "password": "Password",
+    "forgetPassword": "Forget Password",
+    "signIn": "Sign in",
+    "dontHaveAccount": "Dont have an account",
+    "create": "Create now",
+    "signInWith": "Sign in with"
   }
 }

@@ -7,7 +7,10 @@
       <form @submit.prevent="subscribe">
         <div class="row ">
           <div class="col-12">
-            <v-text-field outlined color="white" label="Email">
+            <v-text-field color="white" outlined
+                          label="Email"
+                          class="custom-label-color"
+            >
               <v-btn
                   slot="append"
                   x-large
@@ -19,9 +22,7 @@
           </div>
         </div>
       </form>
-
     </div>
-
   </section>
 </template>
 
@@ -31,7 +32,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
 .newsLetter .v-btn {
   margin-top: -16px;
   margin-right: -10px;
@@ -41,5 +42,15 @@ export default {
   min-height: 25vh;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url('../assets/img/2.png') center center no-repeat;
   background-size: contain;
+}
+
+
+.custom-label-color .v-label {
+  color: white;
+  opacity: 1;
+}
+
+.custom-label-color .v-text-field--outlined >>> fieldset {
+  border-color: red !important;
 }
 </style>

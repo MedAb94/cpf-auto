@@ -8,7 +8,7 @@
     <v-card-text class="white--text font-weight-bold">
       <v-container>
         <v-row>
-          <v-col cols="12" md="3" lg="3" sm="12">
+          <v-col cols="12" sm="12" md="3" lg="3">
             <v-img
                 :src="require('../assets/logo.png')"
                 max-width="200px"
@@ -16,7 +16,7 @@
             <v-icon color="white">mdi-phone</v-icon>
             514-325-4619
           </v-col>
-          <v-col cols="12" md="6" lg="6">
+          <v-col cols="12" sm="6" md="6" lg="6">
             <v-row>
               <v-col cols="12" lg="8" md="8">
                 Address : 10120 Avenue Garon, Montreal Nord QC HIH 3S7
@@ -28,7 +28,9 @@
                 </div>
               </v-col>
               <v-col cols="12" lg="4" md="4">
-                {{ $t("footer.links") }}
+                <div class="pl-8">
+                  {{ $t("footer.links") }}
+                </div>
                 <div>
                   <v-list  style="background-color: transparent">
                     <v-list-item>
@@ -60,6 +62,7 @@
                         </router-link>
                       </v-list-item-title>
                     </v-list-item>
+
                     <v-list-item>
                       <v-list-item-title>
                         <router-link :to="{name:'Contact'}">
@@ -79,21 +82,18 @@
                         </router-link>
                       </v-list-item-title>
                     </v-list-item>
-                    <v-list-item>
-                    </v-list-item>
+
                   </v-list>
                 </div>
               </v-col>
             </v-row>
           </v-col>
-          <v-col cols="12" md="3" lg="3">
+          <v-col cols="12" sm="6" md="3" lg="3">
             <h3 class="text-center text-md-left">
               {{ $t("footer.delivery") }}
             </h3>
             <div>
               <v-icon color="white" class="mr-5">mdi-facebook</v-icon>
-              <v-icon color="white" class="mr-5">mdi-instagram</v-icon>
-              <v-icon color="white" class="mr-5">mdi-twitter</v-icon>
             </div>
             <v-container>
               <v-row align="center">
@@ -115,7 +115,6 @@
       </v-container>
     </v-card-text>
     <v-divider/>
-
     <div class="white--text text-center">
       &copy{{ new Date().getFullYear() }} — <strong>Pieces D'auto CPF INC/ All rights reserved</strong>
     </div>

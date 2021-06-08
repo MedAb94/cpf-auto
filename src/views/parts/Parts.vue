@@ -8,7 +8,7 @@
               <v-row class="ma-0">
                 <v-col cols="3">
                   <v-select
-                      label="Year"
+                      :label="$t('parts.filter.year')"
                       class="border-r"
                       :items="years"
                       v-model="year"
@@ -18,19 +18,25 @@
                   </v-select>
                 </v-col>
                 <v-col cols="4">
-                  <v-select label="Make"
-                            :items="allMakes"
-                            item-text="name"
-                            item-value="id"
-                            v-model="make"
-                            class="border-r"
-                            @change="fetchModels"
+                  <v-select
+                      :label="$t('parts.filter.make')"
+                      :items="allMakes"
+                      item-text="name"
+                      item-value="id"
+                      v-model="make"
+                      class="border-r"
+                      @change="fetchModels"
                   >
                     <v-icon slot="prepend" color="blue">mdi-calendar</v-icon>
                   </v-select>
                 </v-col>
                 <v-col cols="4">
-                  <v-select label="Type Model" item-text="name" item-value="id" :items="allMakeModels" v-model="model">
+                  <v-select
+                      :label="$t('parts.filter.model')"
+                      item-text="name"
+                      item-value="id"
+                      :items="allMakeModels"
+                      v-model="model">
                     <v-icon slot="prepend" color="blue">mdi-calendar</v-icon>
                   </v-select>
                 </v-col>
@@ -48,40 +54,43 @@
 
     </section>
     <section class=" pa-3 light pa-md-10">
-      <h3>Select a category</h3>
+      <h3 class="my-5"> {{ $t('parts.selectCateg') }}
+      </h3>
       <v-row justify="stretch">
         <v-col cols="12" lg="3" md="4"
                v-for="c in allModelCategories" :key="c.id"
         >
-          <v-card
-              class="mx-auto"
-              max-width="344"
+          <router-link
+              class="white--text "
+              :to="{name : 'CategParts', params:{categ_id: c.id, model_id: model, categ_name: c.name}}"
           >
-            <v-img
-                src="../../assets/img/4.jpg"
-                height="200px"
-            />
-
-            <v-card-title class="primary white--text text-center">
-              <router-link class="white--text" :to="{name : 'CategParts', params:{categ_id: c.id, model_id: model, categ_name: c.name}}">
+            <v-card
+                flat
+                class="mx-auto"
+                max-width="344"
+            >
+              <v-img
+                  src="../../assets/img/4.jpg"
+              />
+              <v-card-title class="primary white--text text-center">
                 {{ c.name }}
-              </router-link>
-            </v-card-title>
-            <v-card-text v-if="c.subsShown">
-              <v-list>
-                <v-list-item v-for="sub in c.sous_categories">
-                  <v-list-item-content>
-                    <v-list-item-title>
-                      <router-link :to="{name : 'CategParts', params:{categ_id: 1, model_id: 1}}">
-                        {{ sub.name }}
-                      </router-link>
-                    </v-list-item-title>
-                    <v-list-item-subtitle> {{ sub.sous_related_categories.length }} Parts</v-list-item-subtitle>
-                  </v-list-item-content>
-                </v-list-item>
-              </v-list>
-            </v-card-text>
-          </v-card>
+              </v-card-title>
+              <v-card-text v-if="c.subsShown">
+                <v-list>
+                  <v-list-item v-for="sub in c.sous_categories">
+                    <v-list-item-content>
+                      <v-list-item-title>
+                        <router-link :to="{name : 'CategParts', params:{categ_id: 1, model_id: 1}}">
+                          {{ sub.name }}
+                        </router-link>
+                      </v-list-item-title>
+                      <v-list-item-subtitle> {{ sub.sous_related_categories.length }} Parts</v-list-item-subtitle>
+                    </v-list-item-content>
+                  </v-list-item>
+                </v-list>
+              </v-card-text>
+            </v-card>
+          </router-link>
         </v-col>
       </v-row>
     </section>

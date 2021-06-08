@@ -9,7 +9,7 @@
             </h1>
             <h1 class="display-1 my-5"> {{ $t('home.title.2') }}</h1>
             <div>
-              <v-btn rounded class="blue white--text px-8">{{ $t("home.shopNow") }}</v-btn>
+              <v-btn rounded class="blue white--text px-8" :to="{name: 'Parts'}">{{ $t("home.shopNow") }}</v-btn>
             </div>
           </v-col>
         </v-row>
@@ -77,104 +77,317 @@
     <section>
       <!--Brands-->
       <v-container>
-        <h3 class="blue--text">{{ $t("brands") }} _______
+        <h3 class="blue--text">
+          {{ $t("brands") }} _______
           <v-icon style="margin-top: 5px">mdi-circle-small</v-icon>
         </h3>
-        <v-container
+        <v-sheet
+            class="mx-auto"
         >
-          <v-row align="center" justify="stretch">
-            <v-col cols="12" lg="3" md="4">
+          <v-slide-group
+              v-model="model"
+              class="pa-4"
+              show-arrows
+          >
+            <v-slide-item v-slot="{ active, toggle }">
               <v-card
-                  class="mx-auto"
-                  max-width="344"
+                  class="ma-4"
+                  height="100"
+                  width="200"
               >
                 <v-img
                     src="../assets/img/brands/transbec fournisseur.jpg"
                 />
               </v-card>
-            </v-col>
-            <v-col cols="12" lg="3" md="4">
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
               <v-card
-                  class="mx-auto"
-                  max-width="344"
+                  class="ma-4"
+                  height="100"
+                  width="200"
               >
                 <v-img
                     src="../assets/img/brands/Monidex logo.png"
                 />
               </v-card>
-            </v-col>
-            <v-col cols="12" lg="3" md="4">
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
               <v-card
-                  class="mx-auto"
-                  max-width="344"
-              >
-                <v-img
-                    src="../assets/img/brands/Altrom-Group.jpg"
-                />
-              </v-card>
-            </v-col>
-            <v-col cols="12" lg="3" md="4">
-              <v-card
-                  class="mx-auto"
-                  max-width="344"
+                  class="ma-4"
+                  height="100"
+                  width="200"
               >
                 <v-img
                     src="../assets/img/brands/Alliance_Connect_fournisseur.jpg"
                 />
               </v-card>
-            </v-col>
-            <v-col cols="12" lg="3" md="4">
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
               <v-card
-                  class="mx-auto"
-                  max-width="344"
+                  class="ma-4"
+                  height="100"
+                  width="200"
               >
                 <v-img
                     src="../assets/img/brands/armorall.jpg"
                 />
               </v-card>
-            </v-col>
-            <v-col cols="12" lg="3" md="4">
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
               <v-card
-                  class="mx-auto"
-                  max-width="344"
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/autokool.jpg"
+                />
+              </v-card>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/bando.jpg"
+                />
+              </v-card>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/Bosal.jpg"
+                />
+              </v-card>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/bosch.jpg"
+                />
+              </v-card>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/contitech.jpg"
+                />
+              </v-card>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/denso.jpg"
+                />
+              </v-card>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
               >
                 <v-img
                     src="../assets/img/brands/fourseasons.jpg"
                 />
               </v-card>
-            </v-col>
-            <v-col cols="12" lg="3" md="4">
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
               <v-card
-                  class="mx-auto"
-                  max-width="344"
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/gates.jpg"
+                />
+              </v-card>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
               >
                 <v-img
                     src="../assets/img/brands/genius.jpg"
                 />
               </v-card>
-            </v-col>
-            <v-col cols="12" lg="3" md="4">
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
               <v-card
-                  class="mx-auto"
-                  max-width="344"
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/kleenflo.jpg"
+                />
+              </v-card>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/kugel.jpg"
+                />
+              </v-card>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/loop.jpg"
+                />
+              </v-card>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/lucasoilproducts.jpg"
+                />
+              </v-card>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/Monidex logo.png"
+                />
+              </v-card>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
               >
                 <v-img
                     src="../assets/img/brands/moog.jpg"
                 />
               </v-card>
-            </v-col>
-            <v-col cols="12" lg="3" md="4">
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
               <v-card
-                  class="mx-auto"
-                  max-width="344"
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/pur.jpg"
+                />
+              </v-card>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/rocklandworldparts.jpg"
+                />
+              </v-card>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/tor.jpg"
+                />
+              </v-card>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/Total.jpg"
+                />
+              </v-card>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/transbec fournisseur.jpg"
+                />
+              </v-card>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/Unity.jpg"
+                />
+              </v-card>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
               >
                 <v-img
                     src="../assets/img/brands/walkerexhaust.jpg"
                 />
               </v-card>
-            </v-col>
-          </v-row>
-        </v-container>
+            </v-slide-item>
+            <v-slide-item v-slot="{ active, toggle }">
+              <v-card
+                  class="ma-4"
+                  height="100"
+                  width="200"
+              >
+                <v-img
+                    src="../assets/img/brands/wix.jpg"
+                />
+              </v-card>
+            </v-slide-item>
+          </v-slide-group>
+        </v-sheet>
       </v-container>
 
     </section>

@@ -4,14 +4,8 @@
       <v-container class="fill-height">
         <v-row class="fill-height" align="center" justify="stretch">
           <v-col cols="12" class="text-center white--text">
-            <h1 class="display-2 blue--text">
-              Get In Touch
-            </h1>
-            <h1 class="display-1 my-5">And Our Expert Support Team </h1>
-            <h1 class="display-1 my-5">Will Answer All Your Questions</h1>
-            <div>
-              <v-btn rounded class="blue white--text px-8">{{ $t("navbar.contact") }}</v-btn>
-            </div>
+            <h1 class="display-1 my-5">{{$t("contact.title")}}</h1>
+            <h2 class="display-1 my-5">{{$t("contact.subtitle")}}</h2>
           </v-col>
         </v-row>
       </v-container>
@@ -23,6 +17,15 @@
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d178790.956034495!2d-73.87038772548914!3d45.558196846619715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a541c64b70d%3A0x654e3138211fefef!2sMontreal%2C%20QC%2C%20Canada!5e0!3m2!1sen!2s!4v1621256694570!5m2!1sen!2s"
               width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
           </iframe>
+          <div>
+            <v-icon>mdi-map-marker</v-icon>10120 Avenue Garon, Montreal Nord QC HIH 3S7
+          </div>
+          <div>
+            <v-icon>mdi-phone</v-icon>514-325-4619
+          </div>
+          <div>
+            <v-icon>mdi-email</v-icon>info@piecesdautocpf.ca
+          </div>
         </v-col>
         <v-col cols="12" lg="6" md="6">
           <v-form class="pa-3 pa-md-10 ">
@@ -75,7 +78,7 @@ export default {
 </script>
 <style scoped>
 .hero {
-  height: 70vh;
+  height: 50vh;
   background: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url('../assets/img/contact.jpg') no-repeat center top;
   background-size: cover;
 }

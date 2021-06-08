@@ -3,24 +3,23 @@
     <section class=" pa-3 hero pa-md-10">
       <v-row>
         <v-col cols="12" lg="6" md="8" class="mx-auto">
-          <h3 class="text-center mb-8">USER LOGIN</h3>
-          <v-text-field label="Email" outlined filled append-icon="mdi-envelop"></v-text-field>
-          <v-text-field label="Password" outlined filled append-icon="mdi-envelop"></v-text-field>
-          <a href="#">Forgot Password</a>
+          <h3 class="text-center mb-8">{{ $t("auth.login") }}</h3>
+          <v-text-field :label="$t('auth.email')" outlined filled append-icon="mdi-envelop"></v-text-field>
+          <v-text-field :label="$t('auth.password')" outlined filled append-icon="mdi-envelop"></v-text-field>
+          <a href="#">{{ $t("auth.forgetPassword") }} ?</a>
           <div>
-            <v-btn large block class="primary my-8">Sign in</v-btn>
+            <v-btn large block class="primary my-8">{{ $t("auth.login") }}</v-btn>
           </div>
-          <div class="my-5">Don't have an account?
-            <router-link to="/auth/signup" class="font-weight-bold">Create Now</router-link>
+          <div class="my-5">{{ $t("auth.dontHaveAccount") }}?
+            <router-link to="/auth/signup" class="font-weight-bold">{{ $t("auth.create") }}</router-link>
           </div>
           <div class="mt-5">
             <g-signin-button
-                class="my-5"
-                style="width: 100%"
+                class="btn btn-lg btn-google btn-block text-uppercase"
                 :params="googleSignInParams"
-                @success="onSignInSuccess"
-                @error="onSignInError">
-              Sign in with Google
+                @success="ongSignInSuccess"
+                @error="ongSignInError">
+              <i class="fa fa-google mr-2"></i> {{$t('auth.continueWith')}} Google
             </g-signin-button>
           </div>
           <div>
@@ -59,7 +58,7 @@ export default {
 </script>
 <style scoped>
 .hero {
-  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../../assets/img/login.png') no-repeat center top;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../../assets/img/login.png') no-repeat center top;
   background-size: cover;
 }
 

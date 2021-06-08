@@ -7,7 +7,7 @@
           <v-col cols="12">
             <v-row>
               <v-col cols="12" >
-                <v-row>
+                <v-row class="black--text">
                   <v-col cols="12" class="border-light my-3" v-for="p in allParts" :key="p.id">
                     <v-row>
                       <v-col cols="2">
@@ -15,7 +15,7 @@
                         <v-img src="../../assets/img/cam-icon.png" alt="Image" v-else/>
                       </v-col>
                       <v-col cols="8">
-                        <div> #{{ p.product.id }} |{{ p.product.fournisseur }}</div>
+                        <div > #{{ p.product.id }} |{{ p.product.fournisseur }}</div>
                         <v-row>
                           <v-col cols="6">
                             <strong>Note</strong> <br> {{ p.product.note }}
@@ -30,7 +30,7 @@
                         </v-row>
                       </v-col>
                       <v-col cols="2">
-                        <h5><router-link :to="{name: 'Contact'}">Appelez-nous en magasin pour la disponibilité</router-link></h5>
+                        <h5 class="border-light"><router-link :to="{name: 'Contact'}">Appelez-nous en magasin pour la disponibilité</router-link></h5>
                       </v-col>
                     </v-row>
                   </v-col>

@@ -5,11 +5,11 @@
     "parts": "LES PIÈCES",
     "contact": "CONTACTEZ-NOUS",
     "account": "COMPTE",
-    "search": "Entrez le nom de la pièce ou un numéro de pièce #"
+    "search": "Entrez le nom ou le numéro de pièce #"
   },
   "services": {
     "1": {
-      "title": "Shpping in Montreal and areas",
+      "title": "Livraison dans la région de Montréal et ses enviorons",
       "desc": "Nous livrons rapidement les pièces d'auto dans la grande région de Montréal et les villes environnantes"
     },
     "2": {
@@ -21,7 +21,7 @@
       "desc": "Magasinez et payez sécuritairement par Visa, Mastercard ou Paypal"
     },
     "weHave": "Nous avons la pièce d'auto que vous cherchez",
-    "weHaveText": "Quelle que la marque de votre véhicule et la pièce dont vous avez besoin, nous l'avons et pouvons vous la livrer rapidement.",
+    "weHaveText": "Quelle que soit la marque de votre véhicule et la pièce dont vous avez besoin, nous l'avons et pouvons vous la livrer rapidement.",
     "viewParts": "VOIR LES PIÈCES "
   },
   "home": {
@@ -33,20 +33,42 @@
     "shopNow": "MAGASINER MAINTENANT"
   },
   "contact": {
-    "title": "CONTACTEZ-NOUS",
+    "title": "Vous avez des questions ou commentaires?",
+    "subtitle": "Veuillez utiliser la section ci-dessous pour nous contacter",
     "name": "Votre nom",
     "email": "Votre couriel",
-    "message": "Votre message"
+    "message": "Votre message",
+    "send": "Envoyer"
+
+  },
+  "parts": {
+    "filter": {
+      "year": "Année",
+      "make": "Marque",
+      "model": "Modéle"
+    },
+    "selectCateg": "Choisir une catégorie"
   },
   "mailBox": {
     "stay": "Inscrivez-vous à notre infolettre",
     "subscribe": "Abonnez-vous à notre boîte aux lettres",
     "subscribeBtn": "Envoyer"
   },
-  "brands": "Nos fournisseurs",
+  "brands": "Nos marques",
+  "suppliers": "Nos fournisseurs",
   "footer": {
     "address": "Adresse",
     "links": "Liens rapides",
-    "delivery": "Livraison dans la region de Monteréal et ses environs"
+    "delivery": "Livraison dans la region de Montréal et ses environs"
+  },
+  "auth": {
+    "login": "CONNEXION",
+    "email": "Courrier élecrtonique",
+    "password": "Mot de passe",
+    "forgetPassword": "Mot de passe oublié",
+    "dontHaveAccount": "Cous n'avez pas de compte",
+    "create": "Créez maintenant",
+    "signInWith": "Connexion avec"
   }
+
 }
