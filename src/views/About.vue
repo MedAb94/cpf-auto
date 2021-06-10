@@ -5,48 +5,33 @@
         <v-row class="fill-height" align="center" justify="stretch">
           <v-col class="text-center white--text">
             <h1 class="display-2">
-              ABOUT <span class="blue--text">PIECES D'AUTO CPF</span>
+              {{ $t("about.hero") }}
             </h1>
-            <h1 class="display-1 my-5">WHO WE ARE</h1>
           </v-col>
         </v-row>
       </v-container>
     </section>
-    <v-container>
-      <section class="light">
+    <section class="light">
+      <v-container>
         <v-row align="center ">
-          <v-col cols="12" lg="6" md="6">
+          <v-col cols="12" lg="6" md="6" class="pa-5">
             <img src="../assets/img/about/2.jpg" style="width: 100%" alt="">
           </v-col>
           <v-col cols="12" lg="6" md="6">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci aliquam assumenda deserunt
-              ducimus, eaque eligendi ex facilis nam odit porro possimus praesentium quis repellendus reprehenderit sed
-              veniam, voluptatem voluptatum!
-              <br>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consectetur eius facere itaque libero
-              quisquam ratione, reiciendis repellat veniam. Alias error fugiat inventore ipsam nihil recusandae
-              voluptas. Fugit, modi, ut. <br>
-            </p>
+            <p>{{ $t("about.1") }}</p>
           </v-col>
         </v-row>
-      </section>
-      <div class="my-5">
-        <v-row align="center">
-          <v-col cols="12" lg="6" md="6">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci aliquam assumenda deserunt
-              ducimus, eaque eligendi ex facilis nam odit porro possimus praesentium quis repellendus reprehenderit sed
-              veniam, voluptatem voluptatum!
-              <br>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consectetur eius facere itaque libero
-              quisquam ratione, reiciendis repellat veniam. Alias error fugiat inventore ipsam nihil recusandae
-              voluptas. Fugit, modi, ut. <br>
-            </p>
-          </v-col>
-          <v-col cols="12" lg="6" md="6">
-            <img src="../assets/img/about/1.jpg" style="width: 100%" alt="">
-          </v-col>
-        </v-row>
-      </div>
+      </v-container>
+    </section>
+    <v-container class="my-5">
+      <v-row align="center">
+        <v-col cols="12" lg="6" md="6">
+          <p>{{ $t("about.2") }}</p>
+        </v-col>
+        <v-col cols="12" lg="6" md="6">
+          <img src="../assets/img/about/1.jpg" style="width: 100%" alt="">
+        </v-col>
+      </v-row>
     </v-container>
 
     <mail-box/>

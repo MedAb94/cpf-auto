@@ -13,7 +13,10 @@
       "10": "genuine parts",
       "2": "at a competitive price"
     },
-    "shopNow": "Shop now"
+    "shopNow": "Shop now",
+    "zipcode": "Enter a zip code",
+    "verifyAddress": "Check delivery availability for an address"
+
   },
   "brands": "Our Brands",
   "suppliers": "Our Suppliers",
@@ -71,5 +74,11 @@
     "dontHaveAccount": "Dont have an account",
     "create": "Create now",
     "signInWith": "Sign in with"
+  },
+  "about": {
+    "hero": "We are the reference for automotive parts",
+    "1": "Located in North Montreal, CPF Auto Parts gives you access to a wide range of auto parts at competitive prices. Whatever the part you are looking for, we have it.",
+    "2": "Use our website and shop from the comfort of your home and we will deliver your parts. In-store pickup is also available. We deliver in the greater Montreal area, as well as the surrounding cities."
   }
+
 }

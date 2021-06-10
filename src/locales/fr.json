@@ -30,7 +30,10 @@
       "10": "les pièces d’autos",
       "2": "à des prix compétitifs"
     },
-    "shopNow": "MAGASINER MAINTENANT"
+    "shopNow": "MAGASINER MAINTENANT",
+    "zipcode": "Entrer un code postale",
+    "verifyAddress": "Vérifiez la disponibilité de livraison pour une adresse"
+
   },
   "contact": {
     "title": "Vous avez des questions ou commentaires?",
@@ -39,7 +42,6 @@
     "email": "Votre couriel",
     "message": "Votre message",
     "send": "Envoyer"
-
   },
   "parts": {
     "filter": {
@@ -69,6 +71,10 @@
     "dontHaveAccount": "Cous n'avez pas de compte",
     "create": "Créez maintenant",
     "signInWith": "Connexion avec"
+  },
+  "about": {
+    "hero": "Nous sommes la référence en matière de pièces automobiles",
+    "1": "Situé à Montréal nord, CPF pièces d’auto vous donne accès à un large éventail de pièces automobile à des prix compétitifs.  Peu importe la pièce dont vous cherchez, nous l’avons",
+    "2": "Utilisez notre site internet et magasinez dans le confort de votre foyer et nous vous livrerons vos pièces. La cueillette en magasin est disponible également. Nous livrons dans la grande région de Montréal, ainsi que les villes environnantes."
   }
-
 }

@@ -75,7 +75,7 @@
 
       </div>
       <v-spacer></v-spacer>
-      <v-text-field :placeholder="$t('navbar.search')" rounded outlined background-color="white" dense class="mt-5 custom-placeholer-color" >
+      <v-text-field :placeholder="$t('navbar.search')" rounded outlined background-color="white" color="black" dense class="mt-5 custom-placeholer-color" >
         <template v-slot:append>
           <v-icon color="primary">mdi-magnify</v-icon>
         </template>
@@ -172,5 +172,7 @@ a {
   color: black !important;
   opacity: 0.8;
 }
-
+.custom-placeholer-color input {
+  color: black !important;
+}
 </style>

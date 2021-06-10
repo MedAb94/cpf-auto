@@ -16,39 +16,56 @@
       </v-container>
     </section>
     <section class="light pa-8">
-      <v-card class="white pa-5" flat rounded>
+      <v-card class="transparent pa-5" flat rounded>
         <v-row>
-          <v-col class="text-center">
-            <div>
-              <v-icon x-large color="primary" class="mb-5">mdi-truck-check-outline</v-icon>
-            </div>
-            <div class="px-6">
-              <h3>
-                {{ $t("services.1.title") }}
-              </h3>
-              <p>{{ $t("services.1.desc") }}</p>
+          <v-col class="text-center px-3">
+            <div class="white fill-height rounded">
+              <div>
+                <v-icon x-large color="primary" class="mb-5">mdi-truck-check-outline</v-icon>
+              </div>
+              <div class="px-6">
+                <h3>
+                  {{ $t("services.1.title") }}
+                </h3>
+                <p>{{ $t("services.1.desc") }}</p>
+              </div>
+              <div class="text-center">
+                <v-text-field dense flat outlined
+                              :label="$t('home.zipcode')"
+                              style="max-width: 50%"
+                              class="mx-auto"
+                >
+                </v-text-field>
+                <p class="text-center">
+                  {{ $t('home.verifyAddress') }}
+                </p>
+              </div>
             </div>
           </v-col>
-          <v-col class="text-center">
-            <div>
-              <v-icon x-large color="primary" class="mb-5">mdi-headset</v-icon>
-            </div>
-            <div class="px-6">
-              <h3>
-                {{ $t("services.2.title") }}
-              </h3>
-              <p>{{ $t("services.2.desc") }}</p>
+          <v-col class="text-center px-3">
+            <div class="white fill-height rounded">
+              <div>
+                <v-icon x-large color="primary" class="mb-5">mdi-headset</v-icon>
+              </div>
+              <div class="px-6">
+                <h3>
+                  {{ $t("services.2.title") }}
+                </h3>
+                <p>{{ $t("services.2.desc") }}</p>
+              </div>
             </div>
           </v-col>
-          <v-col class="text-center">
-            <div>
-              <v-icon x-large color="primary" class="mb-5">mdi-credit-card-settings-outline</v-icon>
-            </div>
-            <div class="px-6">
-              <h3>
-                {{ $t("services.3.title") }}
-              </h3>
-              <p>{{ $t("services.3.desc") }}</p>
+          <v-col class="text-center px-3">
+            <div class="white fill-height rounded">
+              <div>
+                <v-icon x-large color="primary" class="mb-5">mdi-credit-card-settings-outline</v-icon>
+              </div>
+              <div class="px-6">
+                <h3>
+                  {{ $t("services.3.title") }}
+                </h3>
+                <p>{{ $t("services.3.desc") }}</p>
+              </div>
             </div>
           </v-col>
         </v-row>
@@ -85,9 +102,9 @@
             class="mx-auto"
         >
           <v-slide-group
-              v-model="model"
               class="pa-4"
               show-arrows
+
           >
             <v-slide-item v-slot="{ active, toggle }">
               <v-card
@@ -389,7 +406,6 @@
           </v-slide-group>
         </v-sheet>
       </v-container>
-
     </section>
     <mail-box/>
   </div>
