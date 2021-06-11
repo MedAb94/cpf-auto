@@ -15,7 +15,7 @@
                         <v-img src="../../assets/img/cam-icon.png" alt="Image" v-else/>
                       </v-col>
                       <v-col cols="8">
-                        <div><strong>#{{ p.product.id }}</strong> |{{ p.product.fournisseur }}</div>
+                        <div><strong>#{{ p.product.ref }}</strong> |{{ p.product.fournisseur }}</div>
                         <v-row>
                           <v-col cols="6">
                             <strong>Note</strong> <br> {{ p.product.note }}

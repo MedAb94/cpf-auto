@@ -14,7 +14,7 @@
       <v-row>
         <v-col cols="12" lg="6" md="6">
           <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d178790.956034495!2d-73.87038772548914!3d45.558196846619715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a541c64b70d%3A0x654e3138211fefef!2sMontreal%2C%20QC%2C%20Canada!5e0!3m2!1sen!2s!4v1621256694570!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.72257706498405!2d-73.6305443731106!3d45.603663952711685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDM2JzEzLjQiTiA3M8KwMzcnNDkuMCJX!5e0!3m2!1sen!2s!4v1623408551907!5m2!1sen!2s"
               width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
           </iframe>
           <div>

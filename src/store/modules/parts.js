@@ -4,8 +4,10 @@ const state = {
     models: [],
     modelCategories: [],
     makes: [],
+    searchResult: [],
     makeModels: [],
     parts: [],
+    deliveryCheck: null,
 };
 
 const getters = {
@@ -14,6 +16,8 @@ const getters = {
     allModels: state => state.models,
     allModelCategories: state => state.modelCategories,
     allParts: state => state.parts,
+    allSearchResults: state => state.searchResult,
+    deliveryCheck: state => state.deliveryCheck,
 };
 
 const actions = {
@@ -25,6 +29,26 @@ const actions = {
                 return
                 commit('setMakes', resp.data.data.marks);
                 console.log(resp.data.data)
+            })
+            .catch(err => {
+                commit('setLoading', false);
+            })
+    },
+    async search({commit}, ref) {
+        axios.get('/v1/produits?filter[ref]=' + ref + '&include=models.carModel.mark')
+            .then(resp => {
+                state.searchResult = []
+                resp.data.data.products.map(e => state.searchResult.push(e))
+            })
+            .catch(err => {
+                commit('setLoading', false);
+            })
+    },
+    async checkArea({commit}, zipcode) {
+        axios.post('/v1/check-area', zipcode)
+            .then(resp => {
+                state.searchResult = []
+                console.log(resp.data)
             })
             .catch(err => {
                 commit('setLoading', false);

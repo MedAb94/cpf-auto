@@ -15,7 +15,9 @@
     },
     "shopNow": "Shop now",
     "zipcode": "Enter a zip code",
-    "verifyAddress": "Check delivery availability for an address"
+    "verifyAddress": "Check delivery availability for an address",
+    "verifyAddressResult1": "We do not deliver to the address entered for the moment",
+    "verifyAddressResult2": "We deliver to the address entered"
 
   },
   "brands": "Our Brands",

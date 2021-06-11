@@ -32,7 +32,9 @@
     },
     "shopNow": "MAGASINER MAINTENANT",
     "zipcode": "Saisir un code postale",
-    "verifyAddress": "Vérifiez la disponibilité de livraison pour une adresse"
+    "verifyAddress": "Vérifiez la disponibilité de livraison pour une adresse",
+    "verifyAddressResult1": "Pour le moment nous ne livrons pas à l’adresse saisie",
+    "verifyAddressResult2": "Nous livrons à l’adresse saisie"
 
   },
   "contact": {

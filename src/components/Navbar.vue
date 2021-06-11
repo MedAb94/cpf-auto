@@ -53,8 +53,6 @@
         <v-list-item>
         </v-list-item>
       </v-list>
-
-
     </v-navigation-drawer>
     <v-app-bar
         color="primary"
@@ -75,9 +73,18 @@
 
       </div>
       <v-spacer></v-spacer>
-      <v-text-field :label="$t('navbar.search')" :placeholder1="$t('navbar.search')" rounded outlined background-color="white" color="black" dense class="mt-5 custom-placeholer-color" >
+      <v-text-field
+          v-model="ref"
+          :label="$t('navbar.search')"
+          :placeholder1="$t('navbar.search')"
+          rounded outlined dense
+          background-color="white"
+          color="black"
+          class="mt-5 custom-placeholer-color"
+          v-on:keyup.enter="search"
+      >
         <template v-slot:append>
-          <v-icon color="primary">mdi-magnify</v-icon>
+          <v-icon color="primary" @click="search" style="cursor: pointer !important;">mdi-magnify</v-icon>
         </template>
       </v-text-field>
       <v-spacer></v-spacer>
@@ -157,10 +164,17 @@ export default {
   methods: {
     switchLang(lang) {
       i18n.locale = lang;
+    },
+    search() {
+      if (this.ref) {
+        this.$store.dispatch("search", this.ref)
+        this.$router.push({name: 'PartsSearch', params: {ref: this.ref}})
+      }
     }
   },
   data: () => ({
-    drawer: false
+    drawer: false,
+    ref: ''
   }),
 }
 </script>
@@ -168,14 +182,22 @@ export default {
 a {
   text-decoration: none;
 }
+
 .custom-placeholer-color input::placeholder {
   color: red !important;
   opacity: 0.8;
 }
+
 .custom-placeholer-color .v-label {
   color: black !important;
   opacity: 1;
   font-style: italic;
+
+}
+
+.custom-placeholer-color input {
+  color: black !important;
+  opacity: 1;
 
 }
 </style>

@@ -35,6 +35,11 @@ const routes = [
                 component: Parts,
             },
             {
+                path: 'search/:ref',
+                name: 'PartsSearch',
+                component:()=>import("../views/parts/SearchResult") ,
+            },
+            {
                 path: 'per-cotegory/:categ_name/:categ_id/:model_id',
                 name: 'CategParts',
                 component:() => import("../views/parts/CategoryParts"),

@@ -35,15 +35,26 @@
                     :label="$t('home.zipcode')"
                     style="max-width: 80%"
                     class="mx-auto"
+                    v-model="zipcode"
+                    v-on:keyup.enter="checkArea"
                 >
                   <template slot="append-outer">
-                    <v-btn class="primary" flat style="margin-top: -6px">
-                     Entrer
+                    <v-btn class="primary"
+                           text style="margin-top: -6px"
+                           @click="checkArea"
+                    >
+                      Entrer
                     </v-btn>
                   </template>
                 </v-text-field>
                 <p class="text-center">
                   {{ $t('home.verifyAddress') }}
+                </p>
+                <p class="text-center red--text" v-if="!deliveryCheck && checked">
+                  {{ $t('home.verifyAddressResult1') }}
+                </p>
+                <p class="text-center green--text" v-if="deliveryCheck">
+                  {{ $t('home.verifyAddressResult2') }}
                 </p>
               </div>
             </div>
@@ -420,21 +431,30 @@
 <script>
 import Slider from "../components/Slider";
 import MailBox from "../components/MailBox.vue";
+import {mapGetters} from "vuex";
 
 export default {
   name: 'Home',
   components: {MailBox, Slider},
   data: () => ({
-    imgs: [
-      "../assets/img/brands/armorall.jpg",
-      "../assets/img/brands/fourseasons.jpg",
-      "../assets/img/brands/genius.jpg",
-      "../assets/img/brands/moog.jpg",
-      "../assets/img/brands/walkerexhaust.jpg",
-    ]
+    zipcode: '',
+    checked : false
   }),
 
-  methods: {},
+  methods: {
+    checkArea() {
+      this.checked = true
+      if (this.zipcode) {
+        this.$store.dispatch("checkArea", this.zipcode)
+      }
+    }
+  },
+  computed:{
+    ...mapGetters(["deliveryCheck"])
+  },
+  created() {
+    this.checked = false
+  }
 }
 </script>
 <style scoped>
