@@ -65,16 +65,14 @@
               :to="{name : 'CategParts', params:{categ_id: c.id, model_id: model, categ_name: c.name}}"
           >
             <v-card
-                flat
-                class="mx-auto"
+                class="mx-auto fill-height"
                 max-width="344"
             >
-              <v-img
-                  :src="c.img_url" max-height="150"
+              <v-img :src="c.img_url"  max-height="150"
               />
-              <v-card-title class="primary white--text text-center">
-                {{ c.name }}
-              </v-card-title>
+              <v-card-text class="primary white--text text-center pa-1 mb-0 ">
+                <strong>{{ c.name }}</strong>
+              </v-card-text>
               <v-card-text v-if="c.subsShown">
                 <v-list>
                   <v-list-item v-for="sub in c.sous_categories">
