@@ -18,13 +18,13 @@
               width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
           </iframe>
           <div>
-            <v-icon>mdi-map-marker</v-icon>10120 Avenue Garon, Montreal Nord QC HIH 3S7
+            <v-icon color="primary" class="my-4">mdi-map-marker</v-icon> 10120 Avenue Garon, Montreal Nord QC HIH 3S7
           </div>
           <div>
-            <v-icon>mdi-phone</v-icon>514-325-4619
+            <v-icon color="primary" class="my-4">mdi-phone</v-icon> 514-325-4619
           </div>
           <div>
-            <v-icon>mdi-email</v-icon>info@piecesdautocpf.ca
+            <v-icon color="primary" class="my-4">mdi-email</v-icon> info@piecesdautocpf.ca
           </div>
         </v-col>
         <v-col cols="12" lg="6" md="6">

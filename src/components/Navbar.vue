@@ -75,7 +75,7 @@
 
       </div>
       <v-spacer></v-spacer>
-      <v-text-field :placeholder="$t('navbar.search')" rounded outlined background-color="white" color="black" dense class="mt-5 custom-placeholer-color" >
+      <v-text-field :label="$t('navbar.search')" :placeholder1="$t('navbar.search')" rounded outlined background-color="white" color="black" dense class="mt-5 custom-placeholer-color" >
         <template v-slot:append>
           <v-icon color="primary">mdi-magnify</v-icon>
         </template>
@@ -169,10 +169,13 @@ a {
   text-decoration: none;
 }
 .custom-placeholer-color input::placeholder {
-  color: black !important;
+  color: red !important;
   opacity: 0.8;
 }
-.custom-placeholer-color input {
+.custom-placeholer-color .v-label {
   color: black !important;
+  opacity: 1;
+  font-style: italic;
+
 }
 </style>

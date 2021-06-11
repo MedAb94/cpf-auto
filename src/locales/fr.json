@@ -31,7 +31,7 @@
       "2": "à des prix compétitifs"
     },
     "shopNow": "MAGASINER MAINTENANT",
-    "zipcode": "Entrer un code postale",
+    "zipcode": "Saisir un code postale",
     "verifyAddress": "Vérifiez la disponibilité de livraison pour une adresse"
 
   },
@@ -39,6 +39,7 @@
     "title": "Vous avez des questions ou commentaires?",
     "subtitle": "Veuillez utiliser la section ci-dessous pour nous contacter",
     "name": "Votre nom",
+    "subject": "Sujet",
     "email": "Votre couriel",
     "message": "Votre message",
     "send": "Envoyer"

@@ -30,11 +30,17 @@
                 <p>{{ $t("services.1.desc") }}</p>
               </div>
               <div class="text-center">
-                <v-text-field dense flat outlined
-                              :label="$t('home.zipcode')"
-                              style="max-width: 50%"
-                              class="mx-auto"
+                <v-text-field
+                    dense flat outlined
+                    :label="$t('home.zipcode')"
+                    style="max-width: 80%"
+                    class="mx-auto"
                 >
+                  <template slot="append-outer">
+                    <v-btn class="primary" flat style="margin-top: -6px">
+                     Entrer
+                    </v-btn>
+                  </template>
                 </v-text-field>
                 <p class="text-center">
                   {{ $t('home.verifyAddress') }}

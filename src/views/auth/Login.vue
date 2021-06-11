@@ -13,15 +13,6 @@
           <div class="my-5">{{ $t("auth.dontHaveAccount") }}?
             <router-link to="/auth/signup" class="font-weight-bold">{{ $t("auth.create") }}</router-link>
           </div>
-          <div class="mt-5">
-            <g-signin-button
-                class="btn btn-lg btn-google btn-block text-uppercase"
-                :params="googleSignInParams"
-                @success="ongSignInSuccess"
-                @error="ongSignInError">
-              <i class="fa fa-google mr-2"></i> {{$t('auth.continueWith')}} Google
-            </g-signin-button>
-          </div>
           <div>
             <v-facebook-login app-id="966242223397117" style="width: 100%"></v-facebook-login>
           </div>
@@ -62,13 +53,7 @@ export default {
   background-size: cover;
 }
 
-.g-signin-button {
-  /* This is where you control how the button looks. Be creative! */
-  display: inline-block;
-  padding: 4px 8px;
-  border-radius: 3px;
-  background-color: #3c82f7;
-  color: #fff;
-  box-shadow: 0 3px 0 #0f69ff;
+.v-text-field--outlined >>> fieldset {
+  border-color: black;
 }
 </style>

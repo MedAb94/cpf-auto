@@ -70,7 +70,7 @@
                 max-width="344"
             >
               <v-img
-                  src="../../assets/img/4.jpg"
+                  :src="c.img_url" max-height="150"
               />
               <v-card-title class="primary white--text text-center">
                 {{ c.name }}
