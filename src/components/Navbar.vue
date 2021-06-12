@@ -167,8 +167,8 @@ export default {
     },
     search() {
       if (this.ref) {
-        this.$store.dispatch("search", this.ref)
-        this.$router.push({name: 'PartsSearch', params: {ref: this.ref}})
+        this.$store.dispatch("search", this.ref[0]==="#"?this.ref.substring(1): this.ref)
+        this.$router.push({name: 'PartsSearch', params: {ref: this.ref[0]==="#"?this.ref.substring(1): this.ref}})
       }
     }
   },

@@ -4,7 +4,7 @@
     <v-col cols="12" class="border-light my-3" v-for="p in allSearchResults" :key="p.id">
       <v-row>
         <v-col cols="2">
-          <img :src="p.img_url" alt="Image" v-if="p.img_url">
+          <img :src="p.img_url" alt="Image" v-if="p.img_url" width="100%">
           <v-img src="../../assets/img/cam-icon.png" alt="Image" v-else/>
         </v-col>
         <v-col cols="8">

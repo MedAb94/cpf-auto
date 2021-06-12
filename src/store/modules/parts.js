@@ -7,7 +7,7 @@ const state = {
     searchResult: [],
     makeModels: [],
     parts: [],
-    deliveryCheck: null,
+    deliveryCheck: false,
 };
 
 const getters = {
@@ -45,9 +45,9 @@ const actions = {
             })
     },
     async checkArea({commit}, zipcode) {
-        axios.post('/v1/check-area', zipcode)
+        axios.post('/v1/check-area', {zipcode: zipcode})
             .then(resp => {
-                state.searchResult = []
+                state.deliveryCheck = resp.data
                 console.log(resp.data)
             })
             .catch(err => {

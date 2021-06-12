@@ -47,6 +47,7 @@
                     </v-btn>
                   </template>
                 </v-text-field>
+                {{checked}} {{deliveryCheck}}
                 <p class="text-center">
                   {{ $t('home.verifyAddress') }}
                 </p>

@@ -10,8 +10,9 @@
                 <v-row class="black--text">
                   <v-col cols="12" class="border-light my-3" v-for="p in allParts" :key="p.id">
                     <v-row>
+
                       <v-col cols="2">
-                        <v-img :src="p.product.img_url" alt="Image" max-width="200" v-if="p.product.img_url" />
+                        <v-img :src="p.product.img_url" alt="Image" width="100%" v-if="p.product.img_url" />
                         <v-img src="../../assets/img/cam-icon.png" max-width="200" alt="Image" v-else/>
                       </v-col>
                       <v-col cols="8">
