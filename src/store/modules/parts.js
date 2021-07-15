@@ -24,11 +24,13 @@ const actions = {
     async fetchMakes({commit}) {
         axios.get('/v1/makes?all=true&sort=name')
             .then(resp => {
-                state.makes = []
-                resp.data.data.marks.map(e => state.makes.push(e))
-                return
+                console.log(resp.data.data.marks)
                 commit('setMakes', resp.data.data.marks);
+                return;
+                resp.data.data.marks.map(e => state.makes.push(e))
+                state.makes = []
                 console.log(resp.data.data)
+                return
             })
             .catch(err => {
                 commit('setLoading', false);
@@ -95,10 +97,10 @@ const actions = {
 };
 
 const mutations = {
-    setMakes(payload) {
+    setMakes(state,payload) {
         state.makes = payload
     },
-    setMakeModels(payload) {
+    setMakeModels(state, payload) {
         state.makeModels = payload
     },
 };

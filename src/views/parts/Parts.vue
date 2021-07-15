@@ -53,6 +53,7 @@
 
 
     </section>
+    {{allMakes}}
     <section class=" pa-3 light pa-md-10">
       <h3 class="my-5"> {{ $t('parts.selectCateg') }}
       </h3>
@@ -122,6 +123,9 @@ export default {
     }
   },
   created() {
+    //this.$store.dispatch("fetchMakes")
+  },
+  mounted() {
     this.$store.dispatch("fetchMakes")
   }
 }
